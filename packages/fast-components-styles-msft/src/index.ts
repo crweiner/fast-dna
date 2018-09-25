@@ -76,7 +76,7 @@ import ProgressStyles from "./progress";
 export { ProgressStyles };
 
 /**
- * Export radio style
+ * Export radio styles
  */
 import RadioStyles from "./radio";
 export { RadioStyles };
