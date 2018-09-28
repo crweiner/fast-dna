@@ -5,13 +5,13 @@ import { IManagedClasses, ITabPanelClassNameContract } from "@microsoft/fast-com
 import { ITabPanelHandledProps, ITabPanelManagedClasses, ITabPanelUnhandledProps } from "./tab-panel.props";
 
 class TabPanel extends Foundation<
-    ITabPanelHandledProps & ITabPanelManagedClasses,
+    ITabPanelHandledProps,
     ITabPanelUnhandledProps,
     {}
 > {
     public static displayName: string = "TabPanel";
 
-    protected handledProps: HandledProps<ITabPanelHandledProps & IManagedClasses<ITabPanelClassNameContract>> = {
+    protected handledProps: HandledProps<ITabPanelHandledProps> = {
         managedClasses: void 0,
         slot: void 0
     };

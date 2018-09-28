@@ -34,7 +34,7 @@ const images: JSX.Element[] = [
     (<Image managedClasses={{image: "image"}} src="https://placehold.it/270x100?text=12" alt="placeholder image" />)
 ];
 
-const examples: IComponentFactoryExample<IHorizontalOverflowHandledProps & IHorizontalOverflowManagedClasses> = {
+const examples: IComponentFactoryExample<IHorizontalOverflowHandledProps> = {
     name: "Horizontal overflow",
     component: HorizontalOverflow,
     schema: schema as any,

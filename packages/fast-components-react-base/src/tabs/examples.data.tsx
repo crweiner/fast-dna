@@ -185,7 +185,7 @@ const exampleChildren4: JSX.Element[] = [
     )
 ];
 
-const examples: IComponentFactoryExample<ITabsHandledProps & ITabsManagedClasses> = {
+const examples: IComponentFactoryExample<ITabsHandledProps> = {
     name: "Tabs",
     component: Tabs,
     schema: schema as any,

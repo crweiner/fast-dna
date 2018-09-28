@@ -5,13 +5,13 @@ import Foundation, { HandledProps } from "../foundation";
 import { ITabHandledProps, ITabManagedClasses, ITabUnhandledProps } from "./tab.props";
 
 class Tab extends Foundation<
-    ITabHandledProps & ITabManagedClasses,
+    ITabHandledProps,
     ITabUnhandledProps,
     {}
 > {
     public static displayName: string = "Tab";
 
-    protected handledProps: HandledProps<ITabHandledProps & IManagedClasses<ITabClassNameContract>> = {
+    protected handledProps: HandledProps<ITabHandledProps> = {
         managedClasses: void 0,
         slot: void 0
     };
