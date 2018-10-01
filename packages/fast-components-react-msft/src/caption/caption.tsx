@@ -5,6 +5,7 @@ import { Foundation, HandledProps, TypographySize, TypographyTag } from "@micros
 import { CaptionSize, CaptionTag, ICaptionHandledProps, ICaptionUnhandledProps } from "./caption.props";
 import { ICaptionClassNameContract, IManagedClasses } from "@microsoft/fast-components-class-name-contracts-msft";
 import { Typography } from "../typography";
+import { Dialog } from "../dialog";
 
 class Caption extends Foundation<ICaptionHandledProps & IManagedClasses<ICaptionClassNameContract>, ICaptionUnhandledProps, {}> {
     public static defaultProps: Partial<ICaptionHandledProps> = {
@@ -32,6 +33,7 @@ class Caption extends Foundation<ICaptionHandledProps & IManagedClasses<ICaption
                 className={this.generateClassNames()}
             >
                 {this.props.children}
+                <Dialog className="fwe" />
             </Typography>
         );
     }
