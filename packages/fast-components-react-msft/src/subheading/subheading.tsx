@@ -6,6 +6,7 @@ import {
     ISubheadingManagedClasses,
     ISubheadingUnhandledProps,
     SubheadingLevel,
+    SubheadingProps,
     SubheadingTag
 } from "./subheading.props";
 
@@ -13,18 +14,18 @@ import { Typography } from "../typography";
 import { IManagedClasses, ISubheadingClassNameContract } from "@microsoft/fast-components-class-name-contracts-msft";
 
 class Subheading extends Foundation<
-    ISubheadingHandledProps & IManagedClasses<ISubheadingClassNameContract>,
-    React.HTMLAttributes<HTMLElement>,
+    ISubheadingHandledProps,
+    ISubheadingUnhandledProps,
     {}
 > {
-    public static defaultProps: Partial<ISubheadingHandledProps> = {
+    public static defaultProps: Partial<SubheadingProps> = {
         size: SubheadingLevel._1,
         tag: SubheadingTag.h3
     };
 
     public static displayName: string = "Subheading";
 
-    protected handledProps: HandledProps<ISubheadingHandledProps & IManagedClasses<ISubheadingClassNameContract>> = {
+    protected handledProps: HandledProps<ISubheadingHandledProps> = {
         size: void 0,
         managedClasses: void 0,
         tag: void 0
@@ -61,8 +62,9 @@ class Subheading extends Foundation<
     }
 
     protected generateClassNames(): string {
-        /* tslint:disable-next-line */
-        return super.generateClassNames(`${get(this.props, "managedClasses.subheading")} ${get(this.props, `managedClasses.subheading__${this.props.size}`)}`);
+        return super.generateClassNames(
+            `${get(this.props, "managedClasses.subheading")} ${get(this.props, `managedClasses.subheading__${this.props.size}`)}`
+        );
     }
 }
 
